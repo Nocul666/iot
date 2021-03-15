@@ -1,0 +1,8 @@
+{
+    "short_name": "Site-title",
+    "name": "Site-title",
+    "start_url": "/",
+    "background_color": "#000",
+    "theme_color": "",
+    "display": "fullscreen"
+   }
