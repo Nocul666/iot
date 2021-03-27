@@ -4,12 +4,12 @@
         {
         "src": "",
         "sizes": "144x144",
-        "type": "screen/Capture.png"
+        "type": "image/png"
         },
         {
         "src": "",
         "sizes": "192x192",
-        "type": "screen/Capture1.png"
+        "type": "image/png"
         }
         ],
     "start_url": "https://nocul666.github.io/iot/",
