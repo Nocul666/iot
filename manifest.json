@@ -2,12 +2,12 @@
     "name": "Site-title",
     "icons": [
         {
-        "src": "",
+        "src": "screen/Capture.png",
         "sizes": "144x144",
         "type": "image/png"
         },
         {
-        "src": "",
+        "src": "screen/Capture1.png",
         "sizes": "192x192",
         "type": "image/png"
         }
