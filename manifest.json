@@ -1,7 +1,5 @@
 {   "short_name": "Site-title",
-    "name": "",
+    "name": "Site-title",
     "start_url": "https://nocul666.github.io/iot/",
-    "background_color": "",
-    "theme_color": "",
     "display": "fullscreen"
    }
