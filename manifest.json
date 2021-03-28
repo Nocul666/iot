@@ -13,8 +13,8 @@
         }
         ],
     "start_url": "https://nocul666.github.io/iot/",
-    "background_color": "#0000",
-    "theme_color": "#0000",
+    "background_color": "#000000",
+    "theme_color": "#000000",
     "display": "fullscreen"
 
    }
