@@ -14,124 +14,39 @@
 
 
 <body>
-<script>
-const PATH = 'service-worker.js';
-let isServiceWorkersSupport = ('serviceWorker' in navigator);
-if (isServiceWorkersSupport) {
- console.log('Will service worker register?');
- navigator.serviceWorker.register(PATH).then(function () {
- console.log("Yes it did.");
- }).catch(function (err) {
- console.log("No it didn't. This happened: ", err)
- });
-}
-</script>
-    <!-- sidebar -->
-    <header>
-        <nav class="side-nav">
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-            <main>
-                <div class="title-heading">  
-                    <h1>Tytuł</h1>
+
+    <header>Parking</header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button id="enterBtn">Wyjazd</button>
                 </div>
-                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                    corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br> </h4>
-                    <div class="about-img">
-                        <!-- <img src="" alt="Zdjęcie przedstawiające główny temat strony"> -->
-                    </div>
-            </main>
-    </header>
-    <!-- sekcja do about  -->
-    <section class="About" id="about">
-        <div class="container">
-            <div class="heading">
-                <h1>About</h1>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                Eligendi velit nihil amet illo deleniti dolorem eaque quia culpa officiis quae, <br>
-                corporis laboriosam totam error a! Nostrum recusandae impedit neque laborum. <br></p>
-        </div>
-    </section>
-    <!-- sekcja do galerii -->
-    <section class="Gallery" id="gallery">
-        <div class="container">
-            <div class="heading">
-                <h1>Gallery</h1>
+
+            <div class="row">
+                <div class="col">
+                    <input type="number" id="parkInput">
+                    <button id="parkBtn">Zaparkuj</button>
+                </div>
             </div>
-            <div class="gallery-img">
-                <img src="Capture1.PNG" alt="Zdjęcie galerii">
-            </div>
-            <div class="gallery-img">
-                <!-- <img src="" alt="Zdjęcie galerii"> -->
-            </div>
-            <div class="gallery-img">
-                <!-- <img src="" alt="Zdjęcie galerii"> -->
-            </div>
-            <div class="gallery-img">
-                <!-- <img src="" alt="Zdjęcie galerii"> -->
-            </div>
-            <div class="gallery-img">
-                <!-- <img src="" alt="Zdjęcie galerii"> -->
-            </div>
-            <div class="gallery-img">
-                <!-- <img src="" alt="Zdjęcie galerii"> -->
+
+            <div class="row">
+                <div class="col">
+                    <input type="number" id="leaveInput">
+                    <button id="leaveBtn">Opuść</button>
+                </div>
             </div>
         </div>
-    </section>
-<!-- sekcja kontaktu -->
-    <section class="Contact" id="contact">
-        <div class="container">
-            <div class="heading">
-                <h1>Contact</h1>
-            </div>
-            <form action="">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <label for="subject">Subject:</label>
-                <textarea name="subject" id="subject" cols="10" rows="10"></textarea>
-                <input type="submit" value="Submit">
-            </form>
+
+
         </div>
-    </section>
-    <footer class="copyright">
-        <p>&copy; 2021 Łukasz Noculak</p>
-    </footer>
+
+
+    </main>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
