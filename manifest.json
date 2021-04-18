@@ -18,7 +18,7 @@
         "type": "image/png"
         }
         ],
-    "start_url": "https://nocul666.github.io/iot/",
+    "start_url": "https://app-iot-it.herokuapp.com/",
     "background_color": "#000000",
     "theme_color": "#000000",
     "display": "fullscreen"
