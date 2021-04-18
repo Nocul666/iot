@@ -29,4 +29,19 @@ function logAction(_action, _place) {
     console.log(storageObject.action);
     console.log(storageObject.place);
     console.log(storageObject.date);
+  
+    cookieStore.get('session_id')
+    cookieStore.set({ name: storageObject.action, value: storageObject.place });
 }
+
+cookieStore.addEventListener('change', (event) => {
+    for (const cookie of event.changed) {
+      if (cookie.name === 'session_id')
+        sessionCookieChanged(cookie.value);
+    }
+    for (const cookie of event.deleted) {
+      if (cookie.name === 'session_id')
+        sessionCookieChanged(null);
+    }
+  });
+
