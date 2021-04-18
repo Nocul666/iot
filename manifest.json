@@ -1,6 +1,6 @@
 {
-    "short_name": "Strona_PWA",
-    "name": "Strona_PWA",
+    "short_name": "eParking",
+    "name": "eParking",
     "icons": [{
             "src": "images/Capture1.png",
             "sizes": "256x236",
