@@ -1,10 +1,16 @@
 const CACHE_NAME = "dowolny-string";
-// List of files which are store in cache.
 let filesToCache = ["/",
-    "images/image.png",
-    "style.css",
-    "script.js"
+    "index.html",
+    "script.js",
+    "style.css"
 ];
+
+self.onsync = event => {
+    if (event.tag === 'message-to-log') {
+        event.waitUntil(synchronize());
+    }
+}
+
 self.addEventListener("install", function(evt) {
     evt.waitUntil(
         caches
@@ -13,18 +19,16 @@ self.addEventListener("install", function(evt) {
             return cache.addAll(filesToCache);
         })
         .catch(function(err) {
-            // Snooze errors...
-            // console.error(err);
+
         })
     );
 });
 self.addEventListener("fetch", function(evt) {
-    // Snooze logs...
-    // console.log(event.request.url);
+
     evt.respondWith(
-        // Firstly, send request..
+
         fetch(evt.request).catch(function() {
-            // When request failed, return file from cache...
+
             return caches.match(evt.request);
         })
     );
@@ -41,7 +45,7 @@ self.addEventListener('fetch', function(event) {
         caches.match(event.request)
         .then(function(response) {
             if (response) {
-                return response; // Cache hit
+                return response;
             }
 
             return fetch(event.request.clone())
@@ -61,14 +65,12 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
-// Specify the cookie changes we're interested in during the install event.
 self.addEventListener('install', (event) => {
     event.waitUntil(
         cookieStore.subscribeToChanges([{ name: 'session_id' }])
     );
 });
 
-// Delete cached data when the user logs out.
 self.addEventListener('cookiechange', (event) => {
     for (const cookie of event.deleted) {
         if (cookie.name === 'session_id') {
@@ -77,3 +79,44 @@ self.addEventListener('cookiechange', (event) => {
         }
     }
 });
+
+function getDataFromDb() {
+    return new Promise((resolve, reject) => {
+        let db = indexedDB.open('Parking');
+
+        db.onsuccess = () => {
+                // Pobierz zawartośc bazy
+                db.result.transaction('logObjStore').objectStore('logObjStore').getAll()
+                    .onsuccess = (event) => {
+                        // Podaj zawarotśc dalej
+                        resolve(event.target.result);
+                    }
+            }
+            // W razie bledu wykonaj odpowiednią akcję
+        db.onerror = (err) => {
+            reject(err);
+        }
+    });
+}
+
+function sendToServer(response) {
+    console.log(JSON.stringify(response));
+    // return fetch('your server address', {
+    //     method: 'POST',
+    //     body: JSON.stringify(response),
+    //     headers:{
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
+    // .catch(err => {
+    //     return err;
+    // });
+}
+
+function synchronize() {
+    return getDataFromDb()
+        .then(sendToServer)
+        .catch(function(err) {
+            return err;
+        });
+}
