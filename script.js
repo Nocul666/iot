@@ -7,7 +7,7 @@ var leaveInput = document.getElementById('leaveInput');
 var logArray = [];
 
 enterBtn.addEventListener('click', function() {
-    logAction('Wjazd', 0);
+    logAction('Wjazd', "-");
 });
 parkBtn.addEventListener('click', function() {
     logAction('Parkowanie', parkInput);
