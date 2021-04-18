@@ -21,7 +21,7 @@ function logAction(_action, _place) {
 
     var logEvent = {
         action: _action,
-        place: _place.value,
+        place: _place,
         date: date
     };
     localStorage.setItem(_action, JSON.stringify(logEvent));
