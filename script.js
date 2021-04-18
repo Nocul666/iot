@@ -7,7 +7,7 @@ var leaveInput = document.getElementById('leaveInput');
 var logArray = [];
 
 enterBtn.addEventListener('click', function() {
-    logAction('Wjazd', 0);
+    logAction('Wjazd', null);
 });
 parkBtn.addEventListener('click', function() {
     logAction('Parkowanie', parkInput);
@@ -21,7 +21,7 @@ function logAction(_action, _place) {
 
     var logEvent = {
         action: _action,
-        place: _place.value,
+        place: _place,
         date: date
     };
     localStorage.setItem(_action, JSON.stringify(logEvent));
