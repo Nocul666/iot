@@ -1,26 +1,26 @@
-{
-    "short_name": "Strona_PWA",
-    "name": "Strona_PWA",
-    "icons": [{
-            "src": "images/image.png",
-            "sizes": "256x236",
-            "type": "image/png"
+{   "short_name": "Site-title",
+    "name": "Site-title",
+    "icons": [
+        {
+        "src": "Capture1.PNG",
+        "sizes": "144x144",
+        "type": "image/png"
         },
         {
-            "src": "images/image2.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any maskable"
+        "src": "Capture1.PNG",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
         },
         {
-            "src": "images/image2.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+        "src": "Capture1.PNG",
+        "sizes": "512x512",
+        "type": "image/png"
         }
-    ],
-    "start_url": "https://iotparkpwa.herokuapp.com/",
-    "background_color": "#000",
-    "theme_color": "#317EFB",
+        ],
+    "start_url": "https://app-iot-it.herokuapp.com/",
+    "background_color": "#000000",
+    "theme_color": "#000000",
     "display": "fullscreen"
-}
+
+   }
