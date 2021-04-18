@@ -2,18 +2,18 @@
     "short_name": "eParking",
     "name": "eParking",
     "icons": [{
-            "src": "images/Capture1.png",
+            "src": "images/image.png",
             "sizes": "256x236",
             "type": "image/png"
         },
         {
-            "src": "images/Capture1.png",
+            "src": "images/image.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "images/Capture1.png",
+            "src": "images/image.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
