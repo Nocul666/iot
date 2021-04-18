@@ -2,18 +2,18 @@
     "name": "Site-title",
     "icons": [
         {
-        "src": "Capture1.PNG",
+        "src": "images/Capture1.PNG",
         "sizes": "144x144",
         "type": "image/png"
         },
         {
-        "src": "Capture1.PNG",
+        "src": "images/Capture1.PNG",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any maskable"
         },
         {
-        "src": "Capture1.PNG",
+        "src": "images/Capture1.PNG",
         "sizes": "512x512",
         "type": "image/png"
         }
