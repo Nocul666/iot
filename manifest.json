@@ -2,18 +2,18 @@
     "short_name": "Strona_PWA",
     "name": "Strona_PWA",
     "icons": [{
-            "src": "images/image.png",
+            "src": "images/Capture1.png",
             "sizes": "256x236",
             "type": "image/png"
         },
         {
-            "src": "images/image2.png",
+            "src": "images/Capture1.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "images/image2.png",
+            "src": "images/Capture1.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
