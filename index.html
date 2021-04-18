@@ -14,39 +14,49 @@
 
 
 <body>
+<script>
+const PATH = 'service-worker.js';
+let isServiceWorkersSupport = ('serviceWorker' in navigator);
+if (isServiceWorkersSupport) {
+ console.log('Will service worker register?');
+ navigator.serviceWorker.register(PATH).then(function () {
+ console.log("Yes it did.");
+ }).catch(function (err) {
+ console.log("No it didn't. This happened: ", err)
+ });
+}
+</script>
+<header>Parking</header>
 
-    <header>Parking</header>
-
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button id="enterBtn">Wyjazd</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <input type="number" id="parkInput">
-                    <button id="parkBtn">Zaparkuj</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <input type="number" id="leaveInput">
-                    <button id="leaveBtn">Opuść</button>
-                </div>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button id="enterBtn">Wyjazd</button>
             </div>
         </div>
 
-
+        <div class="row">
+            <div class="col">
+                <input type="number" id="parkInput">
+                <button id="parkBtn">Zaparkuj</button>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col">
+                <input type="number" id="leaveInput">
+                <button id="leaveBtn">Opuść</button>
+            </div>
+        </div>
+    </div>
 
-    </main>
-    <script src="script.js"></script>
 
+    </div>
+
+
+</main>
+<script src="script.js"></script>
 </body>
 
 </html>
