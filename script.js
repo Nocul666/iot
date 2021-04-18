@@ -29,5 +29,4 @@ function logAction(_action, _place) {
     console.log(storageObject.action);
     console.log(storageObject.place);
     console.log(storageObject.date);
-
-   
+}
