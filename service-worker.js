@@ -4,7 +4,7 @@ let filesToCache = ["/", "style.css", "Capture1.png", "script.js"];
 self.addEventListener("install", function (evt) {
   evt.waitUntil(
     caches
-      .open(filesToCache)
+      .open(CACHE_NAME)
       .then(function (cache) {
         return cache.addAll(filesToCache);
       })
