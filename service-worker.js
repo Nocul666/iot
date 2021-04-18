@@ -2,6 +2,7 @@ const CACHE_NAME = "dowolny-string";
 // List of files which are store in cache.
 let filesToCache = ["/",
     "images/image.png",
+    "style.css",
     "script.js"
 ];
 self.addEventListener("install", function(evt) {
